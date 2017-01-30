@@ -73,10 +73,6 @@ class JsProxyizeTransformer extends Transformer with ResolverTransformer {
       transform.addOutput(transform.primaryInput);
       return;
     }
-    for (var clazz in types) {
-      print(clazz);
-    }
-    print(library);
     var lib = resolver.getLibrary(transform.primaryInput.id);
     var transaction = resolver.createTextEditTransaction(lib);
     var unit = lib.definingCompilationUnit.computeNode();
